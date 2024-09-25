@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DRF{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'img/drf.png' %}" type="image/x-icon">
+    {% include 'drf/css.html' %}
+</head>
+{% include 'drf/preload.html' %}
+
+<body>
+    <div id="mainContent">
+        {% include 'drf/navbar.html' %}
+        {% block content %}{% endblock %}
+        {% include 'drf/footer.html' %}
+    </div>
+    {% include 'drf/message.html' %}
+</body>
+{% include 'drf/postload.html' %}
+
+</html>
